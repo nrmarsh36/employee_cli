@@ -3,8 +3,8 @@
 const Employee = require("./Employee");
 
 
-// Do I need ot add role into the constructor parameters???
-class Engineer extends Employee {
+// Do I need to add role into the constructor parameters???
+class Manager extends Employee {
     constructor(name, id, email, officeNumber) {
         super(name, id, email);
         this.officeNumber = officeNumber;
