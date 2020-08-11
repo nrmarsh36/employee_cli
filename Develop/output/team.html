@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Cards</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid bg-success text-white">
+        <div class="container">
+          <h1 class="display-4">Employee Cards</h1>
+          <p class="lead">Add new Engineers, Interns and Managers through the CLI and have their information processed into easily-accessible digital cards! Convenient, right?</p>
+        </div>
+      </div>
+
+    <div class="card-columns">
+        <div class="engineer-card card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header card-title employee_name"><h5>Name:</h5></div>
+            <div class="card-body">
+              <ul class="list-group">
+                  <li class="list-group-item bg-primary">Role: Engineer</li>
+                  <li class="list-group-item bg-primary">Name:</li>
+                  <li class="list-group-item bg-primary">ID:</li>
+                  <li class="list-group-item bg-primary">Email:</li>
+                  <li class="list-group-item bg-primary">Github:</li>
+              </ul>
+            </div>
+        </div>
+        <div class="intern-card card text-white bg-warning mb-3" style="max-width: 18rem;">
+            <div class="card-header card-title employee_name"><h5>Name:</h5></div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item bg-warning">Role: Intern</li>
+                    <li class="list-group-item bg-warning">Name:</li>
+                    <li class="list-group-item bg-warning">ID:</li>
+                    <li class="list-group-item bg-warning">Email:</li>
+                    <li class="list-group-item bg-warning">School:</li>
+                </ul>
+            </div>
+        </div>
+        <div class="manager-card card text-white bg-danger mb-3" style="max-width: 18rem;">
+            <div class="card-header card-title employee_name"><h5>Name:</h5></div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item bg-danger">Role: Manager</li>
+                    <li class="list-group-item bg-danger">Name:</li>
+                    <li class="list-group-item bg-danger">ID:</li>
+                    <li class="list-group-item bg-danger">Email:</li>
+                    <li class="list-group-item bg-danger">Office Number:</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

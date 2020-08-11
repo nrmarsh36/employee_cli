@@ -68,6 +68,10 @@ function employeeCLI() {
             allEmployees.push(new Manager(val.employee_name, val.employee_id. val.email, val.manager_office));
         } else if (val.type === "Intern") {
             allEmployees.push(new Intern(val.employee_name, val.employee_id. val.email, val.intern_school));
+        } else {
+            if (!fs.existsSync(OUTPUT_DIR)) {
+                fs.mkdirSync(OUTPUT_DIR);
+            };
         };
         employeeCLI();
     }).then(fs.writeFile(outPath, render(allEmployees)))
