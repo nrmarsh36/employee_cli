@@ -16,7 +16,7 @@ const Manager = require("./lib/Manager");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
-
+const outPath = path.join
 
 const allEmployees = [];
 const roleOptions = ["Manager", "Engineer", "Intern"];
@@ -57,7 +57,22 @@ const questions = [
         name: "intern_school",
         message: "What school does this intern attend?"
     }
-]
+];
+
+function employeeCLI() {
+    inquirer
+    .prompt(questions).then(val => {
+        if (val.type === "Engineer") {
+            allEmployees.push(new Engineer(val.employee_name, val.employee_id. val.email, val.engineer_github));
+        } else if (val.type === "Manager") {
+            allEmployees.push(new Manager(val.employee_name, val.employee_id. val.email, val.manager_office));
+        } else if (val.type === "Intern") {
+            allEmployees.push(new Intern(val.employee_name, val.employee_id. val.email, val.intern_school));
+        };
+        employeeCLI();
+    }).then(fs.writeFile(outPath, render(allEmployees)))
+};
+employeeCLI();
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
@@ -72,12 +87,3 @@ const questions = [
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
 
-// HINT: each employee type (manager, engineer, or intern) has slightly different
-// information; write your code to ask different questions via inquirer depending on
-// employee type.
-
-// HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
-// and Intern classes should all extend from a class named Employee; see the directions
-// for further information. Be sure to test out each class and verify it generates an
-// object with the correct structure and methods. This structure will be crucial in order
-// for the provided `render` function to work! ```
